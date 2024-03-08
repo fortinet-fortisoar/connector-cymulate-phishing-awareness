@@ -1,0 +1,304 @@
+{
+  "name": "cymulate-phishing-awareness",
+  "label": "Cymulate Phishing Awareness",
+  "version": "1.0.0",
+  "description": "Cymulate's Phishing Awareness campaigns evaluate employees' security awareness levels by simulating phishing attacks.",
+  "publisher": "Fortinet",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "category": "Attack Surface Management",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "help_online": "",
+  "configuration": {
+    "fields": [
+      {
+        "name": "url",
+        "title": "Server URL",
+        "type": "text",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "description": "Specify the Cymulate server URL to connect and perform the automated operations.",
+        "placeholder": "https://api.app.cymulate.com"
+      },
+      {
+        "name": "key",
+        "title": "Secret Key",
+        "type": "password",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "tooltip": "Specify the Secret Key of the API Application already created in the Cymulate Server.",
+        "description": "Specify the Secret Key of the API Application already created in the Cymulate Server."
+      },
+      {
+        "name": "verify_ssl",
+        "title": "Verify SSL",
+        "type": "checkbox",
+        "editable": true,
+        "visible": true,
+        "required": false,
+        "value": true,
+        "description": "Specifies whether the SSL certificate for the server is to be verified. \nBy default, this option is set to True."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "get_phishing_awareness_report",
+      "title": "Get Phishing Awareness Report",
+      "annotation": "get_phishing_awareness_report",
+      "description": "Get the latest Phishing Awareness report results (overview) by the environment ID from Cymulate.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "env",
+          "title": "Environment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the ID of the environment.",
+          "description": "Specify the ID of the environment. If an ID is not provided, the request will return latest report results for the Default environment."
+        }
+      ],
+      "output_schema": {
+        "success": "",
+        "cymulate": "",
+        "errors": [
+          {
+            "msg": ""
+          }
+        ],
+        "code": ""
+      }
+    },
+    {
+      "operation": "get_phishing_awareness_assessment_id",
+      "title": "Get Phishing Awareness assessment IDs",
+      "annotation": "get_phishing_awareness_assessment_id",
+      "description": "Retrieve list of Phishing Awareness assessment IDs from Cymulate.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "env",
+          "title": "Environment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the ID of the environment.",
+          "description": "Specify the ID of the environment. If an ID is not provided, the request will return latest report results for the Default environment."
+        }
+      ],
+      "output_schema": {
+        "success": "",
+        "cymulate": "",
+        "data": []
+      }
+    },
+    {
+      "operation": "get_phishing_awareness_report_for_specific_assessment",
+      "title": "Get Phishing Awareness Report for Specific Assessment",
+      "annotation": "get_phishing_awareness_report_for_specific_assessment",
+      "description": "Retrieve Phishing Awareness report results for a specific assessment from Cymulate.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "id",
+          "title": "Assessment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the assessment ID to fetch its phishing awareness report.",
+          "description": "Specify the assessment ID to fetch its phishing awareness report."
+        }
+      ],
+      "output_schema": {
+        "success": "",
+        "cymulate": "",
+        "errors": [
+          {
+            "msg": ""
+          }
+        ],
+        "code": ""
+      }
+    },
+    {
+      "operation": "get_phishing_awareness_assessment_history",
+      "title": "Get Phishing Awareness Assessment History",
+      "annotation": "get_phishing_awareness_assessment_history",
+      "description": "Retrieve the Phishing Awareness Campaign assessment history within the date range provided. If a date range is not provided, the response will retrieve the history from the last 30 days.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "fromDate",
+          "title": "From Date",
+          "type": "datetime",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the date from where to fetch phishing awareness aampaign assessments .",
+          "description": "Specify the date from where to fetch phishing awareness campaign assessments ."
+        },
+        {
+          "name": "toDate",
+          "title": "To Date",
+          "type": "datetime",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the date until which phishing awareness campaign assessments should be fetched.",
+          "description": "Specify the date until which phishing awareness campaign assessments should be fetched."
+        },
+        {
+          "name": "env",
+          "title": "Environment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the ID of the environment.",
+          "description": "Specify the ID of the environment. If an ID is not provided, the request will return latest report results for the Default environment."
+        }
+      ],
+      "output_schema": {
+        "success": "",
+        "cymulate": "",
+        "data": {
+          "attack": [],
+          "total": ""
+        }
+      }
+    },
+    {
+      "operation": "get_phishing_awareness_campaign_report_for_specific_assessment",
+      "title": "Get Phishing Awareness Campaign Report for Specific Assessment",
+      "annotation": "get_phishing_awareness_campaign_report_for_specific_assessment",
+      "description": "Retrieve Phishing Awareness Campaign report results for a specific assessment from Cymulate.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "id",
+          "title": "Assessment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the assessment ID to fetch its phishing awareness campaign report.",
+          "description": "Specify the assessment ID to fetch its phishing awareness campaign report."
+        },
+        {
+          "name": "skip",
+          "title": "Offset",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the number of records to skip.",
+          "description": "Specify the number of records to skip."
+        },
+        {
+          "name": "limit",
+          "title": "Limit",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the limit of how many items to get.",
+          "description": "Specify the limit of how many items to get."
+        }
+      ],
+      "output_schema": {
+        "success": "",
+        "cymulate": "",
+        "errors": [
+          {
+            "msg": ""
+          }
+        ],
+        "code": ""
+      }
+    },
+    {
+      "operation": "create_phishing_awareness_contact_group",
+      "title": "Create Phishing Awareness Contact Group",
+      "annotation": "create_phishing_awareness_contact_group",
+      "description": "Create Phishing Awareness contact group under Phishing Awareness > Contacts in Cymulate.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "groupName",
+          "title": "Group Name",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the name for the new contact group.",
+          "description": "Specify the name for the new contact group."
+        }
+      ],
+      "output_schema": {
+        "success": "",
+        "id": ""
+      }
+    },
+    {
+      "operation": "get_phishing_awareness_contact_groups",
+      "title": "Get Phishing Awareness Contact Groups",
+      "annotation": "get_phishing_awareness_contact_groups",
+      "description": "Retrieve a list of Phishing Awareness contact groups and their IDs from Cymulate.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [],
+      "output_schema": {
+        "_id": "",
+        "name": "",
+        "client": "",
+        "lastUpdated": "",
+        "updated": "",
+        "createdAt": "",
+        "created": "",
+        "canDelete": ""
+      }
+    },
+    {
+      "operation": "get_phishing_awareness_contacts",
+      "title": "Get Phishing Awareness Contacts",
+      "annotation": "get_phishing_awareness_contacts",
+      "description": "Retrieve a list of contacts within a specific contact group by ID from Cymulate.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "groupId",
+          "title": "Group ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the contact group ID to fetch its phishing awareness contacts.",
+          "description": "Specify the contact group ID to fetch its phishing awareness contacts."
+        }
+      ],
+      "output_schema": {}
+    }
+  ]
+}
