@@ -1,6 +1,7 @@
 ## About the connector
 Cymulate's Phishing Awareness campaigns evaluate employees' security awareness levels by simulating phishing attacks.
 <p>This document provides information about the Cymulate Phishing Awareness Connector, which facilitates automated interactions, with a Cymulate Phishing Awareness server using FortiSOAR&trade; playbooks. Add the Cymulate Phishing Awareness Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Cymulate Phishing Awareness.</p>
+
 ### Version information
 
 Connector Version: 1.0.0
@@ -28,7 +29,9 @@ For the procedure to configure a connector, click [here](https://docs.fortinet.c
 </tr><tr><td>Secret Key</td><td>Specify the Secret Key of the API Application already created in the Cymulate Server.</td>
 </tr><tr><td>Verify SSL</td><td>Specifies whether the SSL certificate for the server is to be verified or not. <br/>By default, this option is set to True.</td></tr>
 </tbody></table>
+
 ## Actions supported by the connector
+
 The following automated operations can be included in playbooks and you can also use the annotations to access operations:
 <table border=1><thead><tr><th>Function</th><th>Description</th><th>Annotation and Category</th></tr></thead><tbody><tr><td>Get Phishing Awareness Report</td><td>Get the latest Phishing Awareness report results (overview) by the environment ID from Cymulate.</td><td>get_phishing_awareness_report <br/>Investigation</td></tr>
 <tr><td>Get Phishing Awareness assessment IDs</td><td>Retrieve list of Phishing Awareness assessment IDs from Cymulate.</td><td>get_phishing_awareness_assessment_id <br/>Investigation</td></tr>
@@ -39,11 +42,16 @@ The following automated operations can be included in playbooks and you can also
 <tr><td>Get Phishing Awareness Contact Groups</td><td>Retrieve a list of Phishing Awareness contact groups and their IDs from Cymulate.</td><td>get_phishing_awareness_contact_groups <br/>Investigation</td></tr>
 <tr><td>Get Phishing Awareness Contacts</td><td>Retrieve a list of contacts within a specific contact group by ID from Cymulate.</td><td>get_phishing_awareness_contacts <br/>Investigation</td></tr>
 </tbody></table>
+
 ### operation: Get Phishing Awareness Report
+
 #### Input parameters
+
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Environment ID</td><td>Specify the ID of the environment. If an ID is not provided, the request will return latest report results for the Default environment.
 </td></tr></tbody></table>
+
 #### Output
+
 The output contains the following populated JSON schema:
 
 <pre>{
@@ -60,7 +68,9 @@ The output contains the following populated JSON schema:
 #### Input parameters
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Environment ID</td><td>Specify the ID of the environment. If an ID is not provided, the request will return latest report results for the Default environment.
 </td></tr></tbody></table>
+
 #### Output
+
 The output contains the following populated JSON schema:
 
 <pre>{
@@ -72,7 +82,9 @@ The output contains the following populated JSON schema:
 #### Input parameters
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Assessment ID</td><td>Specify the assessment ID to fetch its phishing awareness report.
 </td></tr></tbody></table>
+
 #### Output
+
 The output contains the following populated JSON schema:
 
 <pre>{
@@ -91,7 +103,9 @@ The output contains the following populated JSON schema:
 </td></tr><tr><td>To Date</td><td>Specify the date until which phishing awareness campaign assessments should be fetched.
 </td></tr><tr><td>Environment ID</td><td>Specify the ID of the environment. If an ID is not provided, the request will return latest report results for the Default environment.
 </td></tr></tbody></table>
+
 #### Output
+
 The output contains the following populated JSON schema:
 
 <pre>{
@@ -108,7 +122,9 @@ The output contains the following populated JSON schema:
 </td></tr><tr><td>Offset</td><td>Specify the number of records to skip.
 </td></tr><tr><td>Limit</td><td>Specify the limit of how many items to get.
 </td></tr></tbody></table>
+
 #### Output
+
 The output contains the following populated JSON schema:
 
 <pre>{
@@ -125,7 +141,9 @@ The output contains the following populated JSON schema:
 #### Input parameters
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Group Name</td><td>Specify the name for the new contact group.
 </td></tr></tbody></table>
+
 #### Output
+
 The output contains the following populated JSON schema:
 
 <pre>{
@@ -152,6 +170,7 @@ The output contains the following populated JSON schema:
 #### Input parameters
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Group ID</td><td>Specify the contact group ID to fetch its phishing awareness contacts.
 </td></tr></tbody></table>
+
 #### Output
 
  The output contains a non-dictionary value.
