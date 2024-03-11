@@ -209,7 +209,7 @@
           "visible": true,
           "required": false,
           "tooltip": "Specify the number of records to skip.",
-          "description": "Specify the number of records to skip."
+          "description": "Specify the index of the first item to be returned by this operation. This parameter is useful if you want to get a subset of records, say records starting from the 10th index."
         },
         {
           "name": "limit",
@@ -219,7 +219,7 @@
           "visible": true,
           "required": false,
           "tooltip": "Specify the limit of how many items to get.",
-          "description": "Specify the limit of how many items to get."
+          "description": "Specify the maximum number of results that this operation should return."
         }
       ],
       "output_schema": {
