@@ -1,6 +1,6 @@
 ## About the connector
 Cymulate's Phishing Awareness campaigns evaluate employees' security awareness levels by simulating phishing attacks.
-<p>This document provides information about the Cymulate Phishing Awareness Connector, which facilitates automated interactions, with a Cymulate Phishing Awareness server using FortiSOAR&trade; playbooks. Add the Cymulate Phishing Awareness Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Cymulate Phishing Awareness.</p>
+<p>This document provides information about the Cymulate Phishing Awareness - BAS Connector, which facilitates automated interactions, with a Cymulate Phishing Awareness - BAS server using FortiSOAR&trade; playbooks. Add the Cymulate Phishing Awareness - BAS Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Cymulate Phishing Awareness - BAS.</p>
 
 ### Version information
 
@@ -15,8 +15,8 @@ Certified: No
 <pre>yum install cyops-connector-cymulate-phishing-awareness</pre>
 
 ## Prerequisites to configuring the connector
-- You must have the credentials of Cymulate Phishing Awareness server to which you will connect and perform automated operations.
-- The FortiSOAR&trade; server should have outbound connectivity to port 443 on the Cymulate Phishing Awareness server.
+- You must have the credentials of Cymulate Phishing Awareness - BAS server to which you will connect and perform automated operations.
+- The FortiSOAR&trade; server should have outbound connectivity to port 443 on the Cymulate Phishing Awareness - BAS server.
 
 ## Minimum Permissions Required
 - Not applicable
@@ -24,7 +24,7 @@ Certified: No
 ## Configuring the connector
 For the procedure to configure a connector, click [here](https://docs.fortinet.com/document/fortisoar/0.0.0/configuring-a-connector/1/configuring-a-connector)
 ### Configuration parameters
-<p>In FortiSOAR&trade;, on the Connectors page, click the <strong>Cymulate Phishing Awareness</strong> connector row (if you are in the <strong>Grid</strong> view on the Connectors page) and in the <strong>Configurations</strong> tab enter the required configuration details:</p>
+<p>In FortiSOAR&trade;, on the Connectors page, click the <strong>Cymulate Phishing Awareness - BAS</strong> connector row (if you are in the <strong>Grid</strong> view on the Connectors page) and in the <strong>Configurations</strong> tab enter the required configuration details:</p>
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Server URL</td><td>Specify the Cymulate server URL to connect and perform the automated operations.
 </td>
 </tr><tr><td>Secret Key</td><td>Specify the Secret Key of the API Application already created in the Cymulate Server.
@@ -168,7 +168,7 @@ The output contains the following populated JSON schema:
 
  The output contains a non-dictionary value.
 ## Included playbooks
-The `Sample - cymulate-phishing-awareness - 1.0.0` playbook collection comes bundled with the Cymulate Phishing Awareness connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR&trade; after importing the Cymulate Phishing Awareness connector.
+The `Sample - cymulate-phishing-awareness - 1.0.0` playbook collection comes bundled with the Cymulate Phishing Awareness - BAS connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR&trade; after importing the Cymulate Phishing Awareness - BAS connector.
 
 - Create Phishing Awareness Contact Group
 - Get Phishing Awareness Assessment History

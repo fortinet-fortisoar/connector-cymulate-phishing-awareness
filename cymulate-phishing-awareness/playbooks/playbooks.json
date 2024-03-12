@@ -568,7 +568,7 @@
           ]
         }
       ],
-      "name": "Sample - Cymulate Phishing Awareness - 1.0.0",
+      "name": "Sample - Cymulate Phishing Awareness - BAS - 1.0.0",
       "description": "Cymulate's Phishing Awareness campaigns evaluate employees' security awareness levels by simulating phishing attacks.",
       "visible": true,
       "recordTags": [

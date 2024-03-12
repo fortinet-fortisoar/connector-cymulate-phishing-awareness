@@ -1,6 +1,6 @@
 {
   "name": "cymulate-phishing-awareness",
-  "label": "Cymulate Phishing Awareness",
+  "label": "Cymulate Phishing Awareness - BAS",
   "version": "1.0.0",
   "description": "Cymulate's Phishing Awareness campaigns evaluate employees' security awareness levels by simulating phishing attacks.",
   "publisher": "Fortinet",
