@@ -6,10 +6,10 @@
   "publisher": "Fortinet",
   "cs_approved": false,
   "cs_compatible": true,
-  "category": "Attack Surface Management",
+  "category": "Security Posture Management",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
-  "help_online": "",
+  "help_online": "https://github.com/fortinet-fortisoar/connector-cymulate-phishing-awareness/blob/release/1.0.0/docs/cymulate-phishing-awareness.md",
   "configuration": {
     "fields": [
       {
