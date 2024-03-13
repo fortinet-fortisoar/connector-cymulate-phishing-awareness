@@ -1,0 +1,580 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "uuid": "60acd3ac-b3dc-4bba-ae79-41d3bd5f194b",
+      "@type": "WorkflowCollection",
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "uuid": "0d6ecf15-390e-4df2-9137-a03d99abb3f7",
+          "collection": "/api/3/workflow_collections/60acd3ac-b3dc-4bba-ae79-41d3bd5f194b",
+          "steps": [
+            {
+              "uuid": "a80bf469-5de2-4597-a6e2-eb40fa6e8361",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "bf9b927e-1615-4084-adc8-fb8606625843",
+              "@type": "WorkflowStep",
+              "name": "Get Phishing Awareness Report",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Cymulate Phishing Awareness",
+                "config": "",
+                "params": {
+                  "env": ""
+                },
+                "version": "1.0.0",
+                "connector": "cymulate-phishing-awareness",
+                "operation": "get_phishing_awareness_report",
+                "operationTitle": "Get Phishing Awareness Report"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Get the latest Phishing Awareness report results (overview) by the environment ID from Cymulate.",
+          "name": "Get Phishing Awareness Report",
+          "tag": "#Cymulate Phishing Awareness",
+          "recordTags": [
+            "Cymulate",
+            "cymulate-phishing-awareness"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/a80bf469-5de2-4597-a6e2-eb40fa6e8361",
+          "routes": [
+            {
+              "uuid": "32422d86-e18d-49ee-8c32-98c73f09ef16",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Phishing Awareness Report",
+              "sourceStep": "/api/3/workflow_steps/a80bf469-5de2-4597-a6e2-eb40fa6e8361",
+              "targetStep": "/api/3/workflow_steps/bf9b927e-1615-4084-adc8-fb8606625843"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "17a406f1-e357-40d2-a80e-5c4b29eb5ebf",
+          "collection": "/api/3/workflow_collections/60acd3ac-b3dc-4bba-ae79-41d3bd5f194b",
+          "steps": [
+            {
+              "uuid": "79c7904d-575e-4de6-9d38-0e93d0d19287",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "18b95c9c-e215-4d75-94d4-024b0f5c3098",
+              "@type": "WorkflowStep",
+              "name": "Get Phishing Awareness assessment IDs",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Cymulate Phishing Awareness",
+                "config": "",
+                "params": {
+                  "env": ""
+                },
+                "version": "1.0.0",
+                "connector": "cymulate-phishing-awareness",
+                "operation": "get_phishing_awareness_assessment_id",
+                "operationTitle": "Get Phishing Awareness assessment IDs"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieve list of Phishing Awareness assessment IDs from Cymulate.",
+          "name": "Get Phishing Awareness assessment IDs",
+          "tag": "#Cymulate Phishing Awareness",
+          "recordTags": [
+            "Cymulate",
+            "cymulate-phishing-awareness"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/79c7904d-575e-4de6-9d38-0e93d0d19287",
+          "routes": [
+            {
+              "uuid": "d02847d8-ea56-47f8-b12a-4f9654ea9f66",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Phishing Awareness assessment IDs",
+              "sourceStep": "/api/3/workflow_steps/79c7904d-575e-4de6-9d38-0e93d0d19287",
+              "targetStep": "/api/3/workflow_steps/18b95c9c-e215-4d75-94d4-024b0f5c3098"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "0361b75a-aa50-447b-baf9-525c836a2e1e",
+          "collection": "/api/3/workflow_collections/60acd3ac-b3dc-4bba-ae79-41d3bd5f194b",
+          "steps": [
+            {
+              "uuid": "118b5e32-542c-437b-985f-88611a5fcd70",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "6584316e-401f-46ba-80ec-6685622c397b",
+              "@type": "WorkflowStep",
+              "name": "Get Phishing Awareness Report for Specific Assessment",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Cymulate Phishing Awareness",
+                "config": "",
+                "params": {
+                  "id": ""
+                },
+                "version": "1.0.0",
+                "connector": "cymulate-phishing-awareness",
+                "operation": "get_phishing_awareness_report_for_specific_assessment",
+                "operationTitle": "Get Phishing Awareness Report for Specific Assessment"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieve Phishing Awareness report results for a specific assessment from Cymulate.",
+          "name": "Get Phishing Awareness Report for Specific Assessment",
+          "tag": "#Cymulate Phishing Awareness",
+          "recordTags": [
+            "Cymulate",
+            "cymulate-phishing-awareness"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/118b5e32-542c-437b-985f-88611a5fcd70",
+          "routes": [
+            {
+              "uuid": "f090a0c6-2d8b-4883-a8a1-97fc3c5cb170",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Phishing Awareness Report for Specific Assessment",
+              "sourceStep": "/api/3/workflow_steps/118b5e32-542c-437b-985f-88611a5fcd70",
+              "targetStep": "/api/3/workflow_steps/6584316e-401f-46ba-80ec-6685622c397b"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "4efd1705-fe81-46c6-b4f5-3daaf07253dc",
+          "collection": "/api/3/workflow_collections/60acd3ac-b3dc-4bba-ae79-41d3bd5f194b",
+          "steps": [
+            {
+              "uuid": "aa7d2751-c922-46fc-a579-3d58af84c417",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "6ac02898-9224-4b50-b0cb-417c7a2806f0",
+              "@type": "WorkflowStep",
+              "name": "Get Phishing Awareness Assessment History",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Cymulate Phishing Awareness",
+                "config": "",
+                "params": {
+                  "fromDate": "",
+                  "toDate": "",
+                  "env": ""
+                },
+                "version": "1.0.0",
+                "connector": "cymulate-phishing-awareness",
+                "operation": "get_phishing_awareness_assessment_history",
+                "operationTitle": "Get Phishing Awareness Assessment History"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieve the Phishing Awareness Campaign assessment history within the date range provided. If a date range is not provided, the response will retrieve the history from the last 30 days.",
+          "name": "Get Phishing Awareness Assessment History",
+          "tag": "#Cymulate Phishing Awareness",
+          "recordTags": [
+            "Cymulate",
+            "cymulate-phishing-awareness"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/aa7d2751-c922-46fc-a579-3d58af84c417",
+          "routes": [
+            {
+              "uuid": "75d22220-f8bb-4275-bba2-04db2b64e169",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Phishing Awareness Assessment History",
+              "sourceStep": "/api/3/workflow_steps/aa7d2751-c922-46fc-a579-3d58af84c417",
+              "targetStep": "/api/3/workflow_steps/6ac02898-9224-4b50-b0cb-417c7a2806f0"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "fa29ca12-935c-4db2-ba71-29e1b4787241",
+          "collection": "/api/3/workflow_collections/60acd3ac-b3dc-4bba-ae79-41d3bd5f194b",
+          "steps": [
+            {
+              "uuid": "05d7eb10-e35c-4880-a6bc-6305dc76098b",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "9f025e1b-c597-4e37-985e-65c91655d313",
+              "@type": "WorkflowStep",
+              "name": "Get Phishing Awareness Campaign Report for Specific Assessment",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Cymulate Phishing Awareness",
+                "config": "",
+                "params": {
+                  "id": "",
+                  "skip": "",
+                  "limit": ""
+                },
+                "version": "1.0.0",
+                "connector": "cymulate-phishing-awareness",
+                "operation": "get_phishing_awareness_campaign_report_for_specific_assessment",
+                "operationTitle": "Get Phishing Awareness Campaign Report for Specific Assessment"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieve Phishing Awareness Campaign report results for a specific assessment from Cymulate.",
+          "name": "Get Phishing Awareness Campaign Report for Specific Assessment",
+          "tag": "#Cymulate Phishing Awareness",
+          "recordTags": [
+            "Cymulate",
+            "cymulate-phishing-awareness"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/05d7eb10-e35c-4880-a6bc-6305dc76098b",
+          "routes": [
+            {
+              "uuid": "867bbc9b-f442-43e0-8715-4c7233fd3006",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Phishing Awareness Campaign Report for Specific Assessment",
+              "sourceStep": "/api/3/workflow_steps/05d7eb10-e35c-4880-a6bc-6305dc76098b",
+              "targetStep": "/api/3/workflow_steps/9f025e1b-c597-4e37-985e-65c91655d313"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "61ab4ad5-7be7-4c94-a884-d336de57d372",
+          "collection": "/api/3/workflow_collections/60acd3ac-b3dc-4bba-ae79-41d3bd5f194b",
+          "steps": [
+            {
+              "uuid": "3bb93797-1ed7-454f-bfd3-85da2a8a8d99",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "a3619cfd-d4b2-4fa9-bbe4-9d833ed59bae",
+              "@type": "WorkflowStep",
+              "name": "Create Phishing Awareness Contact Group",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Cymulate Phishing Awareness",
+                "config": "",
+                "params": {
+                  "groupName": ""
+                },
+                "version": "1.0.0",
+                "connector": "cymulate-phishing-awareness",
+                "operation": "create_phishing_awareness_contact_group",
+                "operationTitle": "Create Phishing Awareness Contact Group"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Create Phishing Awareness contact group under Phishing Awareness > Contacts in Cymulate.",
+          "name": "Create Phishing Awareness Contact Group",
+          "tag": "#Cymulate Phishing Awareness",
+          "recordTags": [
+            "Cymulate",
+            "cymulate-phishing-awareness"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/3bb93797-1ed7-454f-bfd3-85da2a8a8d99",
+          "routes": [
+            {
+              "uuid": "dd627134-3a61-46d6-a04d-09d82944d3a5",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Create Phishing Awareness Contact Group",
+              "sourceStep": "/api/3/workflow_steps/3bb93797-1ed7-454f-bfd3-85da2a8a8d99",
+              "targetStep": "/api/3/workflow_steps/a3619cfd-d4b2-4fa9-bbe4-9d833ed59bae"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "30e8dbb7-ceb1-43c3-968f-626b3f1bc4b0",
+          "collection": "/api/3/workflow_collections/60acd3ac-b3dc-4bba-ae79-41d3bd5f194b",
+          "steps": [
+            {
+              "uuid": "ed332683-a72d-48fc-8098-1726df7eaffe",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "008752e2-032d-42d4-9789-66189400d389",
+              "@type": "WorkflowStep",
+              "name": "Get Phishing Awareness Contact Groups",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Cymulate Phishing Awareness",
+                "config": "",
+                "params": [],
+                "version": "1.0.0",
+                "connector": "cymulate-phishing-awareness",
+                "operation": "get_phishing_awareness_contact_groups",
+                "operationTitle": "Get Phishing Awareness Contact Groups"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieve a list of Phishing Awareness contact groups and their IDs from Cymulate.",
+          "name": "Get Phishing Awareness Contact Groups",
+          "tag": "#Cymulate Phishing Awareness",
+          "recordTags": [
+            "Cymulate",
+            "cymulate-phishing-awareness"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/ed332683-a72d-48fc-8098-1726df7eaffe",
+          "routes": [
+            {
+              "uuid": "69fec6c0-b79d-46a8-9688-37934f9ec94a",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Phishing Awareness Contact Groups",
+              "sourceStep": "/api/3/workflow_steps/ed332683-a72d-48fc-8098-1726df7eaffe",
+              "targetStep": "/api/3/workflow_steps/008752e2-032d-42d4-9789-66189400d389"
+            }
+          ]
+        },
+        {
+          "@type": "Workflow",
+          "uuid": "45be0fd1-f935-418a-94b2-f49205d61e7f",
+          "collection": "/api/3/workflow_collections/60acd3ac-b3dc-4bba-ae79-41d3bd5f194b",
+          "steps": [
+            {
+              "uuid": "d3720f93-9554-43c9-879b-06259dd669db",
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "step_variables": {
+                  "input": {
+                    "params": []
+                  }
+                }
+              },
+              "left": "20",
+              "top": "20",
+              "stepType": "/api/3/workflow_step_types/b348f017-9a94-471f-87f8-ce88b6a7ad62"
+            },
+            {
+              "uuid": "c3e7b2c3-27e2-4bc3-8725-935a750852f6",
+              "@type": "WorkflowStep",
+              "name": "Get Phishing Awareness Contacts",
+              "description": null,
+              "status": null,
+              "arguments": {
+                "name": "Cymulate Phishing Awareness",
+                "config": "",
+                "params": {
+                  "groupId": ""
+                },
+                "version": "1.0.0",
+                "connector": "cymulate-phishing-awareness",
+                "operation": "get_phishing_awareness_contacts",
+                "operationTitle": "Get Phishing Awareness Contacts"
+              },
+              "left": "188",
+              "top": "120",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671"
+            }
+          ],
+          "triggerLimit": null,
+          "description": "Retrieve a list of contacts within a specific contact group by ID from Cymulate.",
+          "name": "Get Phishing Awareness Contacts",
+          "tag": "#Cymulate Phishing Awareness",
+          "recordTags": [
+            "Cymulate",
+            "cymulate-phishing-awareness"
+          ],
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "parameters": [],
+          "synchronous": false,
+          "triggerStep": "/api/3/workflow_steps/d3720f93-9554-43c9-879b-06259dd669db",
+          "routes": [
+            {
+              "uuid": "84102bb8-b7a0-4e7b-9f2b-0461bafad9a9",
+              "@type": "WorkflowRoute",
+              "label": null,
+              "isExecuted": false,
+              "name": "Start-> Get Phishing Awareness Contacts",
+              "sourceStep": "/api/3/workflow_steps/d3720f93-9554-43c9-879b-06259dd669db",
+              "targetStep": "/api/3/workflow_steps/c3e7b2c3-27e2-4bc3-8725-935a750852f6"
+            }
+          ]
+        }
+      ],
+      "name": "Sample - Cymulate Phishing Awareness - BAS - 1.0.0",
+      "description": "Cymulate's Phishing Awareness campaigns evaluate employees' security awareness levels by simulating phishing attacks.",
+      "visible": true,
+      "recordTags": [
+        "Cymulate",
+        "cymulate-phishing-awareness"
+      ]
+    }
+  ]
+}
